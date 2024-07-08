@@ -1,0 +1,24 @@
+.tech-icons {
+  position: relative;
+}
+
+.tech-icons::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -10px; /* Adjust as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: purple;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.3em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.tech-icons:hover::after {
+  opacity: 1;
+}
